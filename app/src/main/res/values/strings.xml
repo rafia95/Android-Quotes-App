@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QDMRAQuoteApp</string>
+    <string name="textView2Text">Welcome to DMRA Quote App</string>
 </resources>

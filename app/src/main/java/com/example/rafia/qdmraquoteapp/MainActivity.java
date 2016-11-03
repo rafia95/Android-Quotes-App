@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
     private String mUserId;
-    
+
     String[] categories = {"Computer Science","Politicians","Writers","Philosophers","Celebrities"};
 
     @Override
