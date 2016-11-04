@@ -28,7 +28,6 @@ public class MainActivity extends BaseClass {
 //    private DatabaseReference mDatabase;
 //    private FirebaseAuth mFirebaseAuth;
 //    private FirebaseUser mFirebaseUser;
-    private String mUserId;
     Random r;
     int random;
     String c;
@@ -46,16 +45,48 @@ public class MainActivity extends BaseClass {
   //      final ListView listView = (ListView) findViewById(R.id.listView);
      //   final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, android.R.id.text1);
     //    listView.setAdapter(new CategoryAdapter(this,mDatabase,categories))
+        setListeners();
     }
 
     private void setListeners(){
-    TextView tv1 = (TextView) findViewById(R.id.textViewC1);
-
-        tv1.setText(""+categories[0]);
+        TextView tv1 = (TextView) findViewById(R.id.textViewC1);
+        tv1.setText(categories[0]);
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findRandomQuote(v,categories[0]);
+            }
+        });
+        TextView tv2 = (TextView) findViewById(R.id.textViewC2);
+        tv1.setText(categories[1]);
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findRandomQuote(v,categories[1]);
+            }
+        });
+        TextView tv3 = (TextView) findViewById(R.id.textViewC3);
+        tv1.setText(categories[2]);
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findRandomQuote(v,categories[2]);
+            }
+        });
+        TextView tv4 = (TextView) findViewById(R.id.textViewC4);
+        tv1.setText(categories[3]);
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findRandomQuote(v,categories[3]);
+            }
+        });
+        TextView tv5 = (TextView) findViewById(R.id.textViewC5);
+        tv1.setText(categories[4]);
+        tv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findRandomQuote(v,categories[4]);
             }
         });
     }
