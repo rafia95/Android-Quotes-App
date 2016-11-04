@@ -36,6 +36,7 @@ public class BaseClass extends AppCompatActivity
         // Initialize Firebase Auth and Database Reference
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        mFirebaseAuth.signInWithEmailAndPassword("rafiasend@gmail.com", "compscisend");
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         quotes = new ArrayList<>();
