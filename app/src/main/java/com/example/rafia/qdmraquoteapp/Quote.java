@@ -11,6 +11,7 @@ public class Quote implements Parcelable {
     private String quote;
     private String reference;
     private String date;
+    private String category;
     public Quote(){}
 
     public String getAttributed() {
@@ -53,12 +54,17 @@ public class Quote implements Parcelable {
         this.date = date;
     }
 
+    public String getCategory() { return category;}
+
+    public void setCategory(String category){this.category = category;}
+
     protected Quote(Parcel in) {
         attributed = in.readString();
         blurb = in.readString();
         quote = in.readString();
         reference = in.readString();
         date = in.readString();
+        category = in.readString();
     }
 
     @Override
@@ -73,6 +79,8 @@ public class Quote implements Parcelable {
         dest.writeString(quote);
         dest.writeString(reference);
         dest.writeString(date);
+        dest.writeString(category);
+
     }
 
     @SuppressWarnings("unused")
@@ -90,6 +98,6 @@ public class Quote implements Parcelable {
 
     @Override
     public String toString(){
-        return this.getAttributed() + "-" + this.getBlurb() + "-" + this.getQuote() + "-" + this.getReference() + "-" + this.getDate();
+        return this.getAttributed() + "-" + this.getBlurb() + "-" + this.getQuote() + "-" + this.getReference() + "-" + this.getDate() + "-"+this.getCategory();
     }
 }
