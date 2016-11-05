@@ -26,8 +26,6 @@ public class QuoteActivity extends BaseClass
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quote);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         category = (TextView)findViewById(R.id.cat);
         attribute = (TextView)findViewById(R.id.att);
@@ -37,6 +35,9 @@ public class QuoteActivity extends BaseClass
 
         //Intent i = getIntent();
         //quoteBean = (Quote) i.getSerializableExtra("data");
+        Bundle bun = getIntent().getExtras();
+        quoteBean = (Quote) bun.get("Quote");
+        int numWinsP1 = bun.getInt("p1Wins");
 
         //category.setText(quoteBean.getCategory());
         attribute.setText(quoteBean.getAttributed());

@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">QDMRAQuoteApp</string>
     <string name="textView2Text">Welcome to DMRA Quote App</string>
+    <string name="category">QDMRAQuoteApp</string>
+    <string name="attribute">QDMRAQuoteApp</string>
+    <string name="quote">QDMRAQuoteApp</string>
+    <string name="date">QDMRAQuoteApp</string>
+    <string name="ref">QDMRAQuoteApp</string>
+    <string name="dismiss">QDMRAQuoteApp</string>
+    <string name="action_about">QDMRAQuoteApp</string>
+    <string name="action_random">QDMRAQuoteApp</string>
+    <string name="action_last">QDMRAQuoteApp</string>
 </resources>
