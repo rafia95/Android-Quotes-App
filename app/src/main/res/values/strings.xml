@@ -10,4 +10,19 @@
     <string name="action_about">QDMRAQuoteApp</string>
     <string name="action_random">QDMRAQuoteApp</string>
     <string name="action_last">QDMRAQuoteApp</string>
+    <string name="textView">Text</string>
+    <string name="categoryName">Category</string>
+    <string name="email">rafiasend@gmail.com</string>
+    <string name="password">compscisend</string>
+
+    <string-array name="category_array">
+        <item>Celebrities</item>
+        <item>Computer Science</item>
+        <item>Philosophers</item>
+        <item>Politicians</item>
+        <item>Writers</item>
+
+    </string-array>
+
+
 </resources>

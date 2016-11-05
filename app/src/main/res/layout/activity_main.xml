@@ -21,98 +21,13 @@
         android:background="#91e1cf"
         android:textStyle="bold"
         />
-    <!-- <View
+     <View
          android:layout_width="match_parent"
          android:layout_height="2dp"
          android:background="@android:color/black"
          android:layout_below="@+id/textView2"
-         />
-     <TextView
-         android:id="@+id/textViewC1"
-         android:layout_gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="80dp"
-         android:textSize="35dp"
-         android:textAlignment="center"
-         android:textColor="#fe7f2d89"
-         android:textColorHighlight="#0c0c0c"
-         android:layout_below="@+id/textView2"
-         android:paddingTop="20dp"
          />
 
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="2dp"
-         android:background="@android:color/black"
-         android:layout_below="@+id/textViewC1"
-         />
-     <TextView
-         android:id="@+id/textViewC2"
-         android:layout_gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="80dp"
-         android:textSize="35dp"
-         android:textAlignment="center"
-         android:textColor="#fe7f2d89"
-         android:textColorHighlight="#0c0c0c"
-         android:layout_below="@+id/textViewC1"
-         android:paddingTop="20dp"
-         />
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="2dp"
-         android:background="@android:color/black"
-         android:layout_below="@+id/textViewC2"
-         />
-     <TextView
-         android:id="@+id/textViewC3"
-         android:layout_gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="80dp"
-         android:textSize="35dp"
-         android:textAlignment="center"
-         android:textColor="#fe7f2d89"
-         android:textColorHighlight="#0c0c0c"
-         android:layout_below="@+id/textViewC2"
-         android:paddingTop="20dp"
-         />
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="2dp"
-         android:background="@android:color/black"
-         android:layout_below="@+id/textViewC3"
-         />
-     <TextView
-         android:id="@+id/textViewC4"
-         android:layout_gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="80dp"
-         android:textSize="35dp"
-         android:textAlignment="center"
-         android:textColor="#fe7f2d89"
-         android:textColorHighlight="#0c0c0c"
-         android:layout_below="@+id/textViewC3"
-         android:paddingTop="20dp"
-         />
-     <View
-         android:layout_width="match_parent"
-         android:layout_height="2dp"
-         android:background="@android:color/black"
-         android:layout_below="@+id/textViewC4"
-         />
-     <TextView
-         android:id="@+id/textViewC5"
-         android:layout_gravity="center"
-         android:layout_width="match_parent"
-         android:layout_height="80dp"
-         android:textSize="35dp"
-         android:textAlignment="center"
-         android:textColor="#fe7f2d89"
-         android:textColorHighlight="#0c0c0c"
-         android:layout_below="@+id/textViewC4"
-         android:paddingTop="20dp"
-         />
-     -->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -25,12 +25,13 @@ public class BaseClass extends AppCompatActivity {
     protected FirebaseUser mFirebaseUser;
     protected DatabaseReference mDatabase;
 
-    protected List<Quote> quotes;
-    protected int numOfQuotes;
+    protected List<Quote> quotes; // ??
+    protected int numOfQuotes; // ?
 
     protected SharedPreferences prefs;
-    MainActivity mainAct;
+    //MainActivity mainAct;
     private String c;
+    String[] categories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +41,14 @@ public class BaseClass extends AppCompatActivity {
         // Initialize Firebase Auth and Database Reference
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        mFirebaseAuth.signInWithEmailAndPassword("rafiasend@gmail.com", "compscisend");
+        mFirebaseAuth.signInWithEmailAndPassword(getString(R.string.email), getString(R.string.password));
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        quotes = new ArrayList<>();
-        numOfQuotes = 0;
+        // using the strings.xml array
+        categories = getResources().getStringArray(R.array.category_array);
+
+        quotes = new ArrayList<>(); // ?
+        numOfQuotes = 0; // ?
 
         prefs = this.getPreferences(Context.MODE_PRIVATE);
     }
@@ -89,17 +93,15 @@ public class BaseClass extends AppCompatActivity {
     }
 
     protected void randomAction() {
-        mainAct = new MainActivity();
-        System.out.println("IN RANDOM");
+        //   mainAct = new MainActivity();
         Random r = new Random();
         int random = r.nextInt(4) + 0;
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-
-        String c = mainAct.categories[random];
-        getRandomQuote(mDatabase, c);
+        //  mDatabase = FirebaseDatabase.getInstance().getReference();
+        String c = categories[random];
+        getRandomQuote(c);
     }
 
-    protected void getRandomQuote(DatabaseReference db, String category) {
+    private void getRandomQuote(String category) {
         Random r = new Random();
         final int position = r.nextInt(5) + 1;
         c = category;
@@ -107,10 +109,9 @@ public class BaseClass extends AppCompatActivity {
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Quote quote = mainAct.getAQuote(dataSnapshot, position, c);
+                Quote quote = getAQuote(dataSnapshot, position, c);
                 startQuoteActivity(quote);
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 System.out.println("The read failed: " + databaseError.getCode());
@@ -118,12 +119,32 @@ public class BaseClass extends AppCompatActivity {
         });
     }
 
-    protected void startQuoteActivity(Quote quote) {
+    private void startQuoteActivity(Quote quote) {
         Intent i = new Intent(this, QuoteActivity.class);
         i.putExtra("Quote", quote);
         startActivity(i);
     }
-
+    /**
+     *
+     * Retrieves the data from the firebase and creates a quote object
+     * @param dataSnapshot data snapshot
+     * @param rand random number generated for a quote
+     * @param category name of the category selected
+     * @return returns the Quote Object created using the firebase data
+     */
+    private Quote getAQuote(DataSnapshot dataSnapshot, int rand, String category) {
+        Quote quote = new Quote();
+        String cat = getResources().getString(R.string.categoryName);
+        String randomQuote = ""+rand;
+        quote.setAttributed(dataSnapshot.child(cat).child(category).child(randomQuote).child("0").getValue().toString());
+        quote.setBlurb(dataSnapshot.child(cat).child(category).child(randomQuote).child("1").getValue().toString());
+        quote.setQuote(dataSnapshot.child(cat).child(category).child(randomQuote).child("2").getValue().toString());
+        quote.setReference(dataSnapshot.child(cat).child(category).child(randomQuote).child("3").getValue().toString());
+        quote.setDate(dataSnapshot.child(cat).child(category).child(randomQuote).child("4").getValue().toString());
+        quote.setCategory(category);
+        //      System.out.println(quote.toString());
+        return quote;
+    }
     private void lastAction() {
         String id = prefs.getString("id", "");
         String category = prefs.getString("cat", "");
@@ -145,4 +166,5 @@ public class BaseClass extends AppCompatActivity {
         i.putExtra("data", quote);
         startActivity(i);
     }
+
 }

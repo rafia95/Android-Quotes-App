@@ -3,9 +3,9 @@
     android:id="@+id/textView1"
     android:layout_gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="wrap_content"
     android:textSize="35dp"
-    android:text="TextView"
+    android:text="@string/textView"
     android:textAlignment="center"
     android:textColor="#fe7f2d89"
     android:textColorHighlight="#0c0c0c" />
