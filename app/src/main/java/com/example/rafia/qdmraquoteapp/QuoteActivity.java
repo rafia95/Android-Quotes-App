@@ -33,8 +33,8 @@ public class QuoteActivity extends BaseClass
         date = (TextView)findViewById(R.id.date);
         reference = (TextView)findViewById(R.id.ref);
 
-        //Intent i = getIntent();
-        //quoteBean = (Quote) i.getSerializableExtra("data");
+//        Intent i = getIntent();
+//        quoteBean = (Quote) i.getSerializableExtra("data");
         Bundle bun = getIntent().getExtras();
         quoteBean = (Quote) bun.get("Quote");
 

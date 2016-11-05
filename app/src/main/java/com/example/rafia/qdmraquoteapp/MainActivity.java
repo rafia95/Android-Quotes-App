@@ -104,6 +104,7 @@ public class MainActivity extends BaseClass {
      * @param quote the Quote object to be sent to the Quote Activity
      */
     private void startQuoteActivity(Quote quote) {
+        savePref(quote);
         Intent i = new Intent(this, QuoteActivity.class);
         i.putExtra("Quote", quote);
         startActivity(i);

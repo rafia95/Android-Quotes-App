@@ -29,7 +29,7 @@ public class BaseClass extends AppCompatActivity {
     protected int numOfQuotes; // ?
 
     protected SharedPreferences prefs;
-    //MainActivity mainAct;
+    MainActivity mainAct;
     private String c;
     String[] categories;
 
@@ -49,7 +49,7 @@ public class BaseClass extends AppCompatActivity {
 
         quotes = new ArrayList<>(); // ?
         numOfQuotes = 0; // ?
-
+        mainAct = new MainActivity();
         prefs = this.getPreferences(Context.MODE_PRIVATE);
     }
 
@@ -123,6 +123,7 @@ public class BaseClass extends AppCompatActivity {
     }
 
     private void startQuoteActivity(Quote quote) {
+        savePref(quote);
         Intent i = new Intent(this, QuoteActivity.class);
         i.putExtra("Quote", quote);
         startActivity(i);
@@ -166,8 +167,18 @@ public class BaseClass extends AppCompatActivity {
         quote.setReference(reference);
 
         Intent i = new Intent(this, QuoteActivity.class);
-        i.putExtra("data", quote);
+        i.putExtra("Quote", quote);
         startActivity(i);
     }
-
+    private void savePref(Quote quote)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("category", quote.getCategory());
+        editor.putString("attributed", quote.getAttributed());
+        editor.putString("blurb", quote.getBlurb());
+        editor.putString("date", quote.getDate());
+        editor.putString("quoteText", quote.getQuote());
+        editor.putString("reference", quote.getReference());
+        editor.commit();
+    }
 }
