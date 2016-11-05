@@ -45,55 +45,13 @@ public class MainActivity extends BaseClass {
                 position = i;
                 TextView tv = (TextView) view.findViewById(R.id.textView1);
                 tv.setText(categories[i]);
-                findRandomQuote(view,categories[position]);
+                findRandomQuote(mDatabase,categories[position]);
                 System.out.println("the position is " + position + " view " + view) ;
             }
         });
     }
-    //
-//    private void setListeners(){
-//        TextView tv1 = (TextView) findViewById(R.id.textViewC1);
-//        tv1.setText(categories[0]);
-//        tv1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                findRandomQuote(v,categories[0]);
-//            }
-//        });
-//        TextView tv2 = (TextView) findViewById(R.id.textViewC2);
-//        tv1.setText(categories[1]);
-//        tv1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                findRandomQuote(v,categories[1]);
-//            }
-//        });
-//        TextView tv3 = (TextView) findViewById(R.id.textViewC3);
-//        tv1.setText(categories[2]);
-//        tv1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                findRandomQuote(v,categories[2]);
-//            }
-//        });
-//        TextView tv4 = (TextView) findViewById(R.id.textViewC4);
-//        tv1.setText(categories[3]);
-//        tv1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                findRandomQuote(v,categories[3]);
-//            }
-//        });
-//        TextView tv5 = (TextView) findViewById(R.id.textViewC5);
-//        tv1.setText(categories[4]);
-//        tv1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                findRandomQuote(v,categories[4]);
-//            }
-//        });
-//    }
-    private void findRandomQuote(View v,String category ){
+
+    protected void findRandomQuote(DatabaseReference db,String category ){
         r = new Random();
         random =  r.nextInt(5) + 1;
         c = category;
@@ -110,7 +68,7 @@ public class MainActivity extends BaseClass {
             }
         });
     }
-    private Quote getAQuote(DataSnapshot dataSnapshot,int rand,String category){
+    protected Quote getAQuote(DataSnapshot dataSnapshot,int rand,String category){
         Quote quote = new Quote();
         quote.setAttributed(dataSnapshot.child("Category").child(category).child("" + rand).child("0").getValue().toString());
         quote.setBlurb(dataSnapshot.child("Category").child(category).child("" + rand).child("1").getValue().toString());
@@ -121,7 +79,7 @@ public class MainActivity extends BaseClass {
         System.out.println(quote.toString());
         return quote;
     }
-    private void startQuoteActivity(Quote quote)
+    protected void startQuoteActivity(Quote quote)
     {
         Intent i = new Intent(this, QuoteActivity.class);
         i.putExtra("Quote", quote);
