@@ -86,10 +86,13 @@ public class BaseClass extends AppCompatActivity {
     }
 
     private void aboutAction() {
-        /*if (!this.getClass().equals(AboutActivity.class)) {
+        System.out.println("IN ABOUT ACTION 1");
+
+        if (!(this.getClass().equals(AboutActivity.class))) {
+            System.out.println("IN ABOUT ACTION 2");
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
-        }*/
+        }
     }
 
     protected void randomAction() {

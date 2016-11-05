@@ -15,6 +15,18 @@
     <string name="email">rafiasend@gmail.com</string>
     <string name="password">compscisend</string>
 
+    <string name="aboutTitle">About</string>
+
+    <string name="aboutInfo">This is an application that will display quotes from
+        5 different categories: Celebrities, Computer Science, Philosophers Politicians and Writers. \n
+        You have the choice between getting a random quote from any category, or getting a random
+        quote from a specific category. Each quote is supplied with information such as who the
+        quote is attributed to, the link where the quote was taken from and the date it was added
+        to the application.
+
+    </string>
+    <string name="devs">Developers: Rafia and Denys</string>
+
     <string-array name="category_array">
         <item>Celebrities</item>
         <item>Computer Science</item>

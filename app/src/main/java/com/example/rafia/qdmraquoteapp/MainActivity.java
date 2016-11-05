@@ -1,6 +1,7 @@
 package com.example.rafia.qdmraquoteapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -106,5 +107,16 @@ public class MainActivity extends BaseClass {
         Intent i = new Intent(this, QuoteActivity.class);
         i.putExtra("Quote", quote);
         startActivity(i);
+    }
+    private void savePref(Quote quote)
+    {
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("category", quote.getCategory());
+        editor.putString("attributed", quote.getAttributed());
+        editor.putString("blurb", quote.getBlurb());
+        editor.putString("date", quote.getDate());
+        editor.putString("quoteText", quote.getQuote());
+        editor.putString("reference", quote.getReference());
+        editor.commit();
     }
 }

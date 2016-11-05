@@ -37,9 +37,8 @@ public class QuoteActivity extends BaseClass
         //quoteBean = (Quote) i.getSerializableExtra("data");
         Bundle bun = getIntent().getExtras();
         quoteBean = (Quote) bun.get("Quote");
-        int numWinsP1 = bun.getInt("p1Wins");
 
-        //category.setText(quoteBean.getCategory());
+        category.setText(quoteBean.getCategory());
         attribute.setText(quoteBean.getAttributed());
         quote.setText(quoteBean.getQuote());
         date.setText(quoteBean.getDate());
