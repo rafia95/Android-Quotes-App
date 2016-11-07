@@ -81,10 +81,8 @@ public class BaseClass extends AppCompatActivity {
     }
 
     private void aboutAction() {
-        System.out.println("IN ABOUT ACTION 1");
 
         if (!(this.getClass().equals(AboutActivity.class))) {
-            System.out.println("IN ABOUT ACTION 2");
             Intent i = new Intent(this, AboutActivity.class);
             startActivity(i);
         }
@@ -103,7 +101,6 @@ public class BaseClass extends AppCompatActivity {
         Random r = new Random();
         final int position = r.nextInt(5) + 1;
         c = category;
-        System.out.println("the category is " + category + " with random  quote at " + position);
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -112,7 +109,6 @@ public class BaseClass extends AppCompatActivity {
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                System.out.println("The read failed: " + databaseError.getCode());
             }
         });
     }
@@ -141,7 +137,6 @@ public class BaseClass extends AppCompatActivity {
         quote.setReference(dataSnapshot.child(cat).child(category).child(randomQuote).child("3").getValue().toString());
         quote.setDate(dataSnapshot.child(cat).child(category).child(randomQuote).child("4").getValue().toString());
         quote.setCategory(category);
-        //      System.out.println(quote.toString());
         return quote;
     }
     private void lastAction() {
