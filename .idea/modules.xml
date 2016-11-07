@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Assignment2AndroidQuotesDMRA.iml" filepath="$PROJECT_DIR$/Assignment2AndroidQuotesDMRA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Assignment2AndroidQuotesDMRA-master-eba50ac9ecdb0cf4243b03ded2bc46dcaa5970f5.iml" filepath="$PROJECT_DIR$/Assignment2AndroidQuotesDMRA-master-eba50ac9ecdb0cf4243b03ded2bc46dcaa5970f5.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

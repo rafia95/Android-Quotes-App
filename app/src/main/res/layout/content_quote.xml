@@ -29,7 +29,7 @@
             android:gravity="left"
             android:text="@string/category"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
 
             />
 
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
 
             />
 
@@ -58,7 +58,7 @@
             android:onClick="onAttributed"
             android:text="@string/attribute"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
             />
 
@@ -69,7 +69,7 @@
             android:onClick="onAttributed"
             android:layout_margin="5dp"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
 
             />
@@ -118,7 +118,7 @@
             android:gravity="left"
             android:text="@string/date"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
             />
 
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
 
             />
@@ -148,7 +148,7 @@
             android:onClick="onRef"
             android:text="@string/ref"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
 
             />
@@ -160,12 +160,19 @@
             android:onClick="onRef"
             android:layout_margin="5dp"
             android:textColor="#9EA3B0"
-            android:textSize="30dp"
+            android:textSize="24dp"
             android:paddingTop="@dimen/paddingTop"
 
             />
 
     </LinearLayout>
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dismiss"
+        android:onClick="onDismiss"/>
 
 
 </LinearLayout>

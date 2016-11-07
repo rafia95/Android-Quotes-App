@@ -1,6 +1,7 @@
 package com.example.rafia.qdmraquoteapp;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -52,7 +53,11 @@ public class QuoteActivity extends BaseClass
     public void onAttributed(View view)
     {
         new AlertDialog.Builder(this).setMessage(quote.getBlurb()).setTitle("Blurb")
-                .setCancelable(true).show();
+                .setCancelable(true).setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        }).show();
     }
 
     /**

@@ -10,6 +10,7 @@
     <string name="action_random">Random Quote</string>
     <string name="action_last">Last Quote</string>
     <string name="textView">Text</string>
+    <string name="dismiss">Dismiss</string>
     <string name="categoryName">Category</string>
     <string name="email">rafiasend@gmail.com</string>
     <string name="password">compscisend</string>
