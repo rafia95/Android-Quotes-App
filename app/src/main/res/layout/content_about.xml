@@ -33,11 +33,25 @@
 
 
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.75"/>
+            android:layout_weight="0.75"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/denys"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/rafia"/>
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
