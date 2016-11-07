@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "564903399452",
+    "firebase_url": "https://qdmraquoteapp.firebaseio.com",
+    "project_id": "qdmraquoteapp",
+    "storage_bucket": "qdmraquoteapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564903399452:android:dc38edb0eb5169c9",
+        "android_client_info": {
+          "package_name": "com.example.rafia.qdmraquoteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564903399452-hs5tkv0suft7217j75qs3sdh9htk1v4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyeLIrecNkPiRMm0zptOY6VlFRYFiRM14"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
