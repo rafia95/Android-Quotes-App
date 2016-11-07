@@ -28,14 +28,20 @@
             android:textStyle="bold"
             android:gravity="left"
             android:text="@string/category"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+
+            />
 
         <TextView
             android:id="@+id/cat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -51,7 +57,10 @@
             android:gravity="left"
             android:onClick="onAttributed"
             android:text="@string/attribute"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+            />
 
         <TextView
             android:id="@+id/att"
@@ -59,7 +68,11 @@
             android:layout_height="wrap_content"
             android:onClick="onAttributed"
             android:layout_margin="5dp"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -74,14 +87,22 @@
             android:textStyle="bold"
             android:gravity="left"
             android:text="@string/quote"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="20dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
         <TextView
             android:id="@+id/quote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="20dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -96,14 +117,21 @@
             android:textStyle="bold"
             android:gravity="left"
             android:text="@string/date"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+            />
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -119,7 +147,11 @@
             android:gravity="left"
             android:onClick="onRef"
             android:text="@string/ref"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
         <TextView
             android:id="@+id/ref"
@@ -127,7 +159,11 @@
             android:layout_height="wrap_content"
             android:onClick="onRef"
             android:layout_margin="5dp"
-            android:textColor="#9EA3B0"/>
+            android:textColor="#9EA3B0"
+            android:textSize="30dp"
+            android:paddingTop="@dimen/paddingTop"
+
+            />
 
     </LinearLayout>
 
