@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#2D3A3A"
+
     tools:context="com.example.rafia.qdmraquoteapp.MainActivity">
     <TextView
         android:id="@+id/textView2"
@@ -16,9 +18,8 @@
         android:layout_height="100dp"
         android:textSize="40dp"
         android:textAlignment="center"
-        android:textColor="#fe7f2d89"
+        android:textColor="#EEEEEE"
         android:text="@string/textView2Text"
-        android:background="#91e1cf"
         android:textStyle="bold"
         />
      <View
@@ -32,6 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listView"
+
 
         android:layout_below="@+id/textView2">
 

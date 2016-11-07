@@ -10,6 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#2D3A3A"
     tools:context="com.example.rafia.qdmraquoteapp.AboutActivity"
     tools:showIn="@layout/activity_about">
     <TextView
@@ -17,11 +18,13 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/aboutTitle"
+        android:textColor="#9EA3B0"
         android:layout_gravity="center_horizontal" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#9EA3B0"
         android:text="@string/aboutInfo" />
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="0.25"
+            android:textColor="#9EA3B0"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/devs"
             android:layout_gravity="center_horizontal"/>

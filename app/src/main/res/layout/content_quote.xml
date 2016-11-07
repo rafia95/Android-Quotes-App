@@ -9,12 +9,12 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.rafia.qdmraquoteapp.QuoteActivity"
     tools:showIn="@layout/activity_quote"
-    android:gravity="center_horizontal">
+    android:gravity="left"
+    android:background="#2D3A3A">
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -26,14 +26,16 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/category"/>
+            android:gravity="left"
+            android:text="@string/category"
+            android:textColor="#9EA3B0"/>
 
         <TextView
             android:id="@+id/cat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textColor="#9EA3B0"/>
 
     </LinearLayout>
     <LinearLayout
@@ -46,16 +48,18 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
+            android:gravity="left"
             android:onClick="onAttributed"
-            android:text="@string/attribute"/>
+            android:text="@string/attribute"
+            android:textColor="#9EA3B0"/>
 
         <TextView
             android:id="@+id/att"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onAttributed"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textColor="#9EA3B0"/>
 
     </LinearLayout>
     <LinearLayout
@@ -68,14 +72,16 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/quote"/>
+            android:gravity="left"
+            android:text="@string/quote"
+            android:textColor="#9EA3B0"/>
 
         <TextView
             android:id="@+id/quote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textColor="#9EA3B0"/>
 
     </LinearLayout>
     <LinearLayout
@@ -88,14 +94,16 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
-            android:text="@string/date"/>
+            android:gravity="left"
+            android:text="@string/date"
+            android:textColor="#9EA3B0"/>
 
         <TextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textColor="#9EA3B0"/>
 
     </LinearLayout>
     <LinearLayout
@@ -108,25 +116,20 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:textStyle="bold"
-            android:gravity="center_vertical"
+            android:gravity="left"
             android:onClick="onRef"
-            android:text="@string/ref"/>
+            android:text="@string/ref"
+            android:textColor="#9EA3B0"/>
 
         <TextView
             android:id="@+id/ref"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onRef"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textColor="#9EA3B0"/>
 
     </LinearLayout>
-
-    <Button
-        android:layout_marginTop="50dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dismiss"
-        android:onClick="onDismiss"/>
 
 
 </LinearLayout>

@@ -25,9 +25,6 @@ public class BaseClass extends AppCompatActivity {
     protected FirebaseUser mFirebaseUser;
     protected DatabaseReference mDatabase;
 
-    protected List<Quote> quotes; // ??
-    protected int numOfQuotes; // ?
-
     protected SharedPreferences prefs;
     MainActivity mainAct;
     private String c;
@@ -47,8 +44,6 @@ public class BaseClass extends AppCompatActivity {
         // using the strings.xml array
         categories = getResources().getStringArray(R.array.category_array);
 
-        quotes = new ArrayList<>(); // ?
-        numOfQuotes = 0; // ?
         mainAct = new MainActivity();
         prefs = this.getPreferences(Context.MODE_PRIVATE);
     }
@@ -150,16 +145,15 @@ public class BaseClass extends AppCompatActivity {
         return quote;
     }
     private void lastAction() {
-        String id = prefs.getString("id", "");
-        String category = prefs.getString("cat", "");
+        String category = prefs.getString("category", "");
         String attributed = prefs.getString("attributed", "");
         String blurb = prefs.getString("blurb", "");
         String date = prefs.getString("date", "");
-        String quoteText = prefs.getString("quote", "");
-        String reference = prefs.getString("ref", "");
+        String quoteText = prefs.getString("quoteText", "");
+        String reference = prefs.getString("reference", "");
 
         Quote quote = new Quote();
-        //quote.setCategory(category);
+        quote.setCategory(category);
         quote.setAttributed(attributed);
         quote.setBlurb(blurb);
         quote.setDate(date);

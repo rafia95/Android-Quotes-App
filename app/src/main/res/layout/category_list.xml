@@ -7,5 +7,5 @@
     android:textSize="35dp"
     android:text="@string/textView"
     android:textAlignment="center"
-    android:textColor="#fe7f2d89"
+    android:textColor="#9EA3B0"
     android:textColorHighlight="#0c0c0c" />
